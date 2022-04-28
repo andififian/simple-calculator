@@ -1,233 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
     android:orientation="vertical"
+    android:background="#251D3A"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.3">
+        <TextView
+            android:id="@+id/displayhasil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textAlignment="viewEnd"
 
-    <TableLayout
+            android:textColor="@color/white"
+            android:textSize="50sp"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayhasil"
-        app:layout_constraintVertical_bias="1"
-
-        >
-
-        <TableRow
+        android:orientation="horizontal"
+        android:layout_weight="0.2">
+        <Button
+            android:id="@+id/buttonclear"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-
-
-
-        </TableRow>
-
-        <TableRow
+            android:layout_height="match_parent"
+            android:text="@string/C"
+            android:layout_weight="0.5"
+            android:textSize="20sp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/buttonpersen"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:text="@string/persen"
+            android:layout_weight="0.5"
+            android:textSize="20sp"
+            android:backgroundTint="#E04D01"
+            android:layout_margin="1dp"
+            />
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/buttonclear"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/C" />
-
-            <Button
-                android:id="@+id/buttonhapus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:text="@string/hapus" />
-
-            <Button
-                android:id="@+id/buttonkurang"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-
-                android:text="@string/kurang" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button7"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/tujuh" />
-
-            <Button
-                android:id="@+id/button8"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/delapan" />
-
-            <Button
-                android:id="@+id/button9"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/sembilan" />
-
-            <Button
-                android:id="@+id/buttonbagi"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:text="@string/bagi" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button4"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/empat" />
-
-            <Button
-                android:id="@+id/button5"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/lima" />
-
-            <Button
-                android:id="@+id/button6"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/enam" />
-
-            <Button
-                android:id="@+id/buttonkali"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:text="@string/kali" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button1"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/satu" />
-
-            <Button
-                android:id="@+id/button2"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/dua" />
-
-            <Button
-                android:id="@+id/button3"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/tiga" />
-
-            <Button
-                android:id="@+id/buttontambah"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:text="@string/tambah" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/buttonplusminus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/plusminus" />
-
-            <Button
-                android:id="@+id/button0"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/nol" />
-
-            <Button
-                android:id="@+id/buttontitik"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/titik" />
-
-            <Button
-                android:id="@+id/buttonhasil"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:text="@string/hasil" />
-        </TableRow>
-
-    </TableLayout>
-
-    <TextView
-        android:id="@+id/displayhasil"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text=""
-        android:textSize="50dp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        android:layout_weight="0.2">
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tujuh"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#FF7700"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/delapan"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#FF7700"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/sembilan"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#FF7700"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/buttonbagi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/bagi"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#E04D01"
+            android:layout_margin="1dp"
+            />
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.2">
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/empat"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#FF7700"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/lima"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#FF7700"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enam"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#FF7700"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/buttonkali"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/kali"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#E04D01"
+            android:layout_margin="1dp"
+            />
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.2">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/satu"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#FF7700"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/dua"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#FF7700"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tiga"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#FF7700"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/buttonkurang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/kurang"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#E04D01"
+            android:layout_margin="1dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.2">
+        <Button
+            android:id="@+id/buttonhasil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/hasil"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/nol"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#FF7700"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/buttontitik"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/titik"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#E04D01"
+            android:layout_margin="1dp"/>
+        <Button
+            android:id="@+id/buttontambah"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tambah"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="#E04D01"
+            android:layout_margin="1dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
